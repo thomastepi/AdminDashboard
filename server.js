@@ -109,7 +109,7 @@ app.post("/login", (req, res) => {
 app.get("/dashboard", (req, res) => {
   db.query("SELECT * FROM menu", (err, result) => {
     if (req.session.loggedIn) {
-      console.log(result);
+      // console.log(result);
       res.render("dashboard", {
         username: req.session.username,
         result: result,
